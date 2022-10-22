@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-image: url(http://4.bp.blogspot.com/-Fsg8_tQw-Fo/XC5IqPAD3uI/AAAAAAACqqU/Vo-a4AjzMoQOwv5lFnBQ1xCVzHvBsYx4wCK4BGAYYCw/s1600/Chegou%2Bo%2Bvera%25CC%2583o.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*background: linear-gradient(#87ceeb, #e0f6ff);*/
+}
+
+.mario {
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump {
+    animation: jump 800ms infinite ease-out;
+    
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 400px;
+    }
+
+    50% {
+        bottom: 400px;
+    }
+
+    60% {
+        bottom: 400px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 300px;
+    animation: pipe-animation 1.8s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -120%;
+    } to{
+        right: 100%;
+    }
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    } to {
+        right: 100%;
+    }
+}
